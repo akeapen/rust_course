@@ -2,14 +2,14 @@
 //! Useful for fancy rainbow colored text!!
 //! # Examples:
 //! ```
-//! use cli_utils::colors::*;
+//! use doc_ur_code::colors::*;
 //! println!("{}{}{}", red("Red"), green("Green"), blue("Blue"));
 //! ```
 
 /// Returns a string with the ANSI escape code for red.
 /// # Examples:
 /// ```
-/// use cli_utils::colors::*;
+/// use doc_ur_code::colors::*;
 /// println!("{}", red("Red"));
 /// ```
 pub fn red(s: &str) -> String {
@@ -19,7 +19,7 @@ pub fn red(s: &str) -> String {
 /// Returns a string with the ANSI escape code for green.
 /// # Examples:
 /// ```
-/// use cli_utils::colors::*;
+/// use doc_ur_code::colors::*;
 /// println!("{}", green("Money"));
 /// ```
 pub fn green(s: &str) -> String {
@@ -29,7 +29,7 @@ pub fn green(s: &str) -> String {
 /// Returns a string with the ANSI escape code for blue.
 /// # Examples:
 /// ```
-/// use cli_utils::colors::*;
+/// use doc_ur_code::colors::*;
 /// println!("{}", blue("The color the sky"));
 /// ```
 pub fn blue(s: &str) -> String {
@@ -38,7 +38,7 @@ pub fn blue(s: &str) -> String {
 /// Returns a string with the ANSI escape code for making text bold faced.
 /// # Examples:
 /// ```
-/// use cli_utils::colors::*;
+/// use doc_ur_code::colors::*;
 /// println!("{}", bold("this is Bold"));
 /// ```
 pub fn bold(s: &str) -> String {
@@ -49,7 +49,7 @@ pub fn reset(s: &str) -> String {
     format!("\x1b[0m{}\x1b[0m", s)
 }
 
-pub enum Color{
+pub enum Color {
     Red,
     Green,
     Blue,
@@ -59,7 +59,7 @@ pub enum Color{
 pub struct ColorString {
     pub color: Color,
     pub string: String,
-    pub colorized: String
+    pub colorized: String,
 }
 
 impl ColorString {
@@ -76,5 +76,4 @@ impl ColorString {
     pub fn reset(&mut self) {
         self.colorized = reset(&self.string);
     }
-
 }

@@ -1,9 +1,8 @@
 [package]
-name = "doc_ur_code"
+name = "module_ex2"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-# doc_ur_code = {path="/home/ake/Downloads/Coursera/RustProgram-Duke/RustFundamentals/week4/my_library"}

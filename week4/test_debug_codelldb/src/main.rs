@@ -5,6 +5,7 @@ use std::io;
 fn main() {
     let mut input = String::new();
     while input.trim() != "stop" {
+        input.clear();
         println!("Type something ('stop' to quit):");
         io::stdin()
             .read_line(&mut input)
